@@ -17,6 +17,7 @@ h1 {
   font-size: 200%;
 }
 
+/* Added the rest of the header text */
 h1::after {
   font-family: Impact;
   content: 'Pseudo Elements';
@@ -29,14 +30,36 @@ h2 {
   font-size: 180%;
 }
 
+h3 {
+  margin: 2% 0;
+  font-size: 150%;
+}
+
+/* Added asterisk before every h3 heading */
+h3::before {
+  font-family: Impact;
+  content: '\273A';
+  color: #772014;
+  margin-right: 5px;
+}
+
+/* Added symbols before and after the nav links */
+
 nav ul {
   display: flex;
   justify-content: space-between;
   min-width: 300px;
 }
+nav li::before,
+nav li::after {
+  content: '\2766';
+  color: #8ac4ff;
+  padding: 1%;
+  font-family: cursive;
+}
 
 nav a {
-  color: #b9c6ae;
+  color: #b9C6ae;
   font-weight: bold;
   text-decoration: none;
 }
@@ -66,25 +89,12 @@ article p {
   font-size: 110%;
 }
 
-/* TODO: Style the term/phrase - underline, black text, grab cursor */
-
-.html-term {
-  text-decoration: underline;
-  color: black;
-  cursor: grab;
+article ul {
+  margin-left: 5%;
+  margin-bottom: 2%;
+  font-size: 110%;
+  list-style: circle;
 }
-
-.html-term:hover::after {
-  content: 'OOGA BOOGA';
-  background-color: #13293d;
-  border-radius: 10%;
-  font-size: 70%;
-  padding: 2px;
-  color: white;
-  position: absolute;
-  top: 32%;
-}
-/* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
 
 aside {
   width: 25%;
@@ -109,31 +119,8 @@ footer {
   color: #fff;
 }
 
-.resources .links {
-  display: none;
-  padding: 1% 0;
-}
-
-.resources:hover .links {
-  display: block;
-}
-
-.resources h3 {
-  font-size: 150%;
-}
-
-.links a {
-  color: #772014;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
-
 @media screen and (max-width: 768px) {
-  header,
-  main {
+  header, main {
     flex-direction: column;
   }
 

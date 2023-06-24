@@ -13,20 +13,15 @@ header {
   color: #fff;
 }
 
+/* Change font size of headings */
 h1 {
   font-size: 200%;
 }
 
-h1::after {
-  font-family: Impact;
-  content: 'Pseudo Elements';
-  color: #8ac4ff;
-  margin-left: 5px;
-}
-
+/* Change the margin */
 h2 {
   margin: 2% 0;
-  font-size: 180%;
+  font-size: 150%;
 }
 
 nav ul {
@@ -39,10 +34,6 @@ nav a {
   color: #b9c6ae;
   font-weight: bold;
   text-decoration: none;
-}
-
-nav a:hover {
-  color: #fff;
 }
 
 main {
@@ -66,25 +57,46 @@ article p {
   font-size: 110%;
 }
 
-/* TODO: Style the term/phrase - underline, black text, grab cursor */
-
-.html-term {
-  text-decoration: underline;
-  color: black;
-  cursor: grab;
+/* Change the margin specifically */
+article ul {
+  margin-left: 5%;
+  margin-bottom: 2%;
+  font-size: 110%;
+  list-style: circle;
 }
 
-.html-term:hover::after {
-  content: 'OOGA BOOGA';
-  background-color: #13293d;
-  border-radius: 10%;
-  font-size: 70%;
-  padding: 2px;
-  color: white;
-  position: absolute;
-  top: 32%;
+/* Implement font stacks */
+.one {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  font-style: oblique;
 }
-/* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+
+.two {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.three {
+  font-family: 'Menlo', 'Lucida Console', monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Using DevTools, change the following properties to demonstrate the differences */
+.four {
+  /* Change font family: serif, sans-serif, monospace, cursive */
+  font-family: serif;
+  /* Change font weight: bold, 100-900 */
+  font-weight: 100;
+  /* Change the font style: normal, italic, oblique */
+  font-style: normal;
+  /* Transform the text: uppercase, lowercase, capitalize */
+  text-transform: none;
+  /* Set text decorations on fonts: underline, overline, line-through */
+  text-decoration: none;
+}
 
 aside {
   width: 25%;
@@ -107,28 +119,6 @@ footer {
   padding: 2%;
   background-color: #13293d;
   color: #fff;
-}
-
-.resources .links {
-  display: none;
-  padding: 1% 0;
-}
-
-.resources:hover .links {
-  display: block;
-}
-
-.resources h3 {
-  font-size: 150%;
-}
-
-.links a {
-  color: #772014;
-  text-decoration: none;
-}
-
-.links a:hover {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

@@ -60,6 +60,10 @@ article ul {
   list-style: circle;
 }
 
+a[href$='.css']::after {
+  content:'📝';
+}
+
 footer {
   display: flex;
   justify-content: center;
